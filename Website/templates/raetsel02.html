@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block title %}Shiff-Computer{% endblock %}
+
+{% block content %}
+    <style>
+        .box {
+            width: 1000px; /* Breite der Box */
+            height: 650px; /* Höhe der Box */
+            background-color: #040404; /* Hintergrundfarbe der Box */
+            color: #00FF02; /* Textfarbe */
+            padding: 10px;
+            border-radius: 10px; /* Abgerundete Ecken */
+            box-shadow: 0 4px 8px #000000; /* Schlagschatten */
+            margin: 20px auto; /* Zentrierung der Box */
+            font-family: 'Courier New', Courier, monospace;
+        }
+        input[type="text"] {
+        border: none; /* Keine Rahmen um das Input-Feld */
+        background: #000000; /* Schwarzer Hintergrund */
+        color: #00FF02; /* Grüner Text */
+        font-family: 'Courier New', Courier, monospace; /* Schriftart */
+        width: calc(100% - 50px); /* Vollständige Breite abzüglich der Breite des Texts */
+        margin-left: 10px; /* Abstand zum Text */
+        margin-top: -20px; /* Vertikaler Abstand zum Text */
+        padding: 5px; /* Innenabstand */
+    }
+
+    /* Stil für das Eingabefeld, wenn es aktiviert ist */
+    input[type="text"]:focus {
+        background: #000000; /* Schwarzer Hintergrund, wenn das Feld aktiviert ist */
+        color: #00FF02; /* Grüner Text */
+    }
+
+    /* Stil für den überprüfen Button */
+    button[type="submit"] {
+        background-color: #00FF02; /* Hintergrundfarbe des Buttons */
+        color: #000000; /* Textfarbe des Buttons */
+        border: none; /* Kein Rahmen um den Button */
+        padding: 10px 20px; /* Innenabstand */
+        cursor: pointer; /* Zeige Zeiger, wenn der Mauszeiger über dem Button ist */
+        margin-top: 10px; /* Abstand zum vorherigen Element */
+        border-radius: 5px; /* Abgerundete Ecken */
+    }
+
+    /* Stil für den überprüfen Button beim Überfahren */
+    button[type="submit"]:hover {
+        background-color: #00CC00; /* Hintergrundfarbe des Buttons beim Überfahren */
+    }
+    </style>
+<p>Der Shiff-Computer wurde durch den Umfall ausgeschaltet, du machst duch auf dem weg um ihn wieder neu zu starten.
+    Du schaltest den PC an und bist gerade bereit dich mit deinem Passwort anzumelden als du folgendes auf deinem Bildscchirm siehst:</p>
+
+<body>
+    <div class="box">
+        <p>STARFLEET COMMAND SYSTEM (SCS) - (C) 2147 Intergalactic Tech Inc. <br>
+BIOS Date 07/14/2147 08:22:51 Ver: 15.7.9<br>
+CPU: QuantumCore X9000 @ 5 THz<br>
+Speed: 5 THz<br>
+This Starfleet BIOS is released under the Galactic Public License (GPL)<br>
+Press F9 for Starfleet Mission Log<br>
+Memory Clock: 1024 ZHz, Telemetry: QX78 Neural Net, AI Integration: Active<br>
+Memory Test: 64 ZB OK<br>
+AI Core Version: HAL9000<br>
+Quantum Drive Firmware: QDF-13.6.7<br>
+Initializing Quantum Communication Arrays... Done.<br>
+1.6 PB OK<br>
+Quantum Device(s): 3 Sentient Modules, 5 Holographic Interfaces, 12 Storage Nodes<br>
+Auto-detecting Quantum Storage Devices..<br>
+Device #01: Quantum Flash Module *Speed*<br>
+12 Quantum storage devices found and configured.<br>
+(C) 2147 Intergalactic Tech Inc.<br>
+82-0914-2147Q-89GHTXZ-753N01-2147A-9ZQXMN45-P4G3
+</p>
+<p>Please enter password:<br>
+            **********<br>
+    incorrect password<br>
+<p>Dein Passwort haben wir geändert. Löse Rätsel... oder werde unser <span style="font-family: Arial, sans-serif;">ë̸͓̮͉͈͇͍̖͎̩̞͈́́́̋̇̾͋̈́̾͆͑͘͘͜͠͝s̴̹̀̎̇͗̍͗̾̋̏̈͐͒̕͠͠ͅs̴̹̀̎̇͗̍͗̾̋̏̈͐͒̕͠͠ͅë̸͓̮͉͈͇͍̖͎̩̞͈́́́̋̇̾͋̈́̾͆͑͘͘͜͠͝ǹ̷̨͍̮̥̹̘͙̗̻̬̬̜̥̮̃̒̈́̽͗̿̍̄̂̏͆͠͝</span>
+</p>
+ <p> A wurde zu E und E wurde zu I. Dein Passwort lautet: Pimfwtimwi
+
+
+
+        <p>Please enter password:<br>
+        <form action="{{ url_for('views.check_solution') }}" method="POST">
+    <label for="solution">>_</label>
+    <input type="text" id="solution" name="solution" required>
+    <input type="hidden" name="riddle" value="raetsel02">
+    <button type="submit">Überprüfen</button>
+    </form>
+        {% if result is defined %}
+    {% if result %}
+        <p style="color: #14FF00;">Passwort correct <br>
+        booting up STARFLEET COMMAND SYSTEM</p>
+    {% else %}
+        <p style="color: #FF0000;">incorrect password</p>
+    {% endif %}
+{% endif %}
+    </div>
+</body>
+{% endblock %}
