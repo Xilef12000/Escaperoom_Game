@@ -6,7 +6,7 @@ def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'amorfati'
 
-    from .views import views
+    from .Index import views
 
     app.register_blueprint(views, url_prefix='/')
 
