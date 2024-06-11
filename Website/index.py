@@ -70,11 +70,11 @@ def check_solution():
 
 def check_riddle_03_solution(form_data):
     correct_solution = {
-        'solution_a': '1',
-        'solution_b': '1',
-        'solution_c': '1',
-        'solution_d': '1',
-        'solution_e': '1'
+        'solution_a': 'Dielenschraube',
+        'solution_b': 'Sprenglerschraube',
+        'solution_c': 'Holzbauschraube',
+        'solution_d': 'Bohrschraube',
+        'solution_e': 'Justierschraube'
     }
     user_solution = {
         'solution_a': form_data.get('solution_a').strip().lower(),
