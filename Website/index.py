@@ -71,9 +71,9 @@ def check_solution():
 def check_riddle_03_solution(form_data):
     correct_solution = {
         'solution_a': 'Dielenschraube',
-        'solution_b': 'Sprenglerschraube',
+        'solution_b': 'Bohrschraube',
         'solution_c': 'Holzbauschraube',
-        'solution_d': 'Bohrschraube',
+        'solution_d': 'Sprenglerschraube',
         'solution_e': 'Justierschraube'
     }
     user_solution = {
