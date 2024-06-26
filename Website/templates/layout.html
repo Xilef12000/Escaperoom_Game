@@ -46,7 +46,7 @@
 <body>
     <div class="navbar">
         <a href="{{ url_for('views.home') }}">Zurück</a>
-        <div id="timer">01:00:00</div>
+        <div id="timer">00:45:00</div>
     </div>
     <div class="content">
         {% block content %}{% endblock %}
@@ -92,7 +92,7 @@
 
         window.onload = function () {
             // Dauer des Timers in Sekunden (1 Stunde = 3600 Sekunden)
-            var oneHour = 60 * 60,
+            var oneHour = 60 * 45,
                 display = document.querySelector('#timer');
 
             // Startzeit aus der Session
