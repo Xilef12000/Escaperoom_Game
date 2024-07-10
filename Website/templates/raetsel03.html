@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 
-{% block title %}Sauerstoff generator{% endblock %}
+{% block title %}Sauerstoff Generator{% endblock %}
 
 {% block content %}
  <style>
@@ -15,28 +15,28 @@
             margin: 20px auto; /* Zentrierung der Box */
         }
  </style>
-<a>Der Sauerstoffgenerator deines Schiffes hat bei der Kollision auch schaden erlitten. Du machst dich auf dem Weg um ihn zu reparieren und als du den Raum betritts siehst du das 5 unterschiedlich große Schrauben auf dem Boden liegen: <br>
+<a>Der Sauerstoffgenerator deines Schiffes hat bei der Kollision auch Schaden erlitten. Du machst dich auf dem Weg, um ihn zu reparieren und als du den Raum betrittst, siehst du, dass 5 unterschiedlich große Schrauben auf dem Boden liegen: <br>
     Die Bohrschraube, Deilenschraube, Holzbauschraube, Justierschraube und Sprenglerschraube.</a>
-<a> Du weißt das diese Schrauben Zahnräder im Sauerstoffgenerator stabilisiert haben, aber nicht mehr zu welchem Zahnrad die jeweiligen Schrauben gehören. Du schaust dich um und findest auch hier wieder ein Zettel am Fenster Kleben:</a>
+<a> Du weißt, dass diese Schrauben Zahnräder im Sauerstoffgenerator stabilisiert haben, aber nicht mehr, zu welchem Zahnrad die jeweiligen Schrauben gehören. Du schaust dich um und findest auch hier wieder ein Zettel am Fenster kleben:</a>
 
 <div class="box">
-    <a>Zahnrad A und E sind entweder die kleinste oder die größte <br>
+    <a>Zahnrad A und E sind entweder das Kleinste oder das Größte <br>
     Zahnrad D ist kleiner als Zahnrad A <br>
-    Zahnrad B ist die drittkleinste und drittgrößte <br>
+    Zahnrad B ist das Drittkleinste und Drittgrößte <br>
     Zahnrad C ist größer als Zahnrad E und kleiner als Zahnrad D</a>
 </div>
 
 
-<a>Du errinerst dich noch, dass die kleinste Schraube zu dem größten Zahnrad gehört und je kleiner die Zahnräder werden desto größer die Schrauben.</a>
+<a>Du erinnerst dich noch, dass die kleinste Schraube zu dem größten Zahnrad gehört und je kleiner die Zahnräder werden desto größer die Schrauben.</a>
 
 <div class="box">
 <a>Die Justierschraube ist die Größte<br>
     Die Holzbauschraube ist größer als die Deilen und die Bohrschraube<br>
     Die Bohrschraube ist größer als die Sprenglerschraube <br>
-    Die Sprenglerschraube größer ist als die Deilenschraube aber kleiner als die Holzbauschraube</a>
+    Die Sprenglerschraube ist größer als die Deilenschraube aber kleiner als die Holzbauschraube</a>
 </div>
 
-<a>Um den Sauerstoffgenerator zu reparieren musst du jedes Zahnrad mit der entsprechenden Shraube festmachen.</a>
+<a>Um den Sauerstoffgenerator zu reparieren, musst du jedes Zahnrad mit der entsprechenden Schraube festmachen.</a>
 
 <form action="{{ url_for('views.check_solution') }}" method="POST">
     <label for="solution_a">Zahnrad A:</label>
