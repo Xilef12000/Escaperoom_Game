@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd Escaperoom_game || echo skip
+cd Escaperoom_Game || echo skip
 python3 main.py
