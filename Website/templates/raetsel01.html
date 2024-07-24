@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}Motorraum{% endblock %}
+
+{% block content %}
+<p>Du rennst in Richtung des Motorraums deines Schiffes und auch dort findest du am Fenster wieder einen Zettel. Das ist wohl eines ihrer Rätsel... du reißt dich zusammen und schaust dir den Zettel an:</p>
+<img src="{{ url_for('static', filename='Beispiel.png') }}">
+<p>Ein Schachbrett? Du wusstest nicht, dass Schach auch auf anderen Planeten bekannt ist, doch du hast keine Zeit dir darüber Gedanken zu machen... Zum Glück erinnerst du dich an die Namen der Schachfiguren: Turm, Läufer, Springer, Bauer, Dame und König</p>
+<p>Du siehst, dass unter dem Zettel noch ein weiterer Zettel klebt:</p>
+<img src="{{ url_for('static', filename='Rätsel.png') }}">
+
+<form action="{{ url_for('views.check_solution') }}" method="POST">
+    <label for="solution">Deine Lösung:</label>
+    <input type="text" id="solution" name="solution" required>
+    <input type="hidden" name="riddle" value="raetsel01">
+    <button type="submit">Überprüfen</button>
+</form>
+
+{% if result is defined %}
+    {% if result %}
+        <p style="color: green;">Richtige Antwort!</p>
+    {% else %}
+        <p style="color: red;">Falsche Antwort...</p>
+    {% endif %}
+{% endif %}
+{% endblock %}

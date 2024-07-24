@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #0C0B0B;
+            font-family: Arial, sans-serif;
+        }
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .content a {
+            display: block;
+        }
+        .content a button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #0D0E0E;
+            color: #11FFFF;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <video width="600" controls>
+        <source src="{{ url_for('static', filename='videos/video01.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <p style="color:#11FFFF">Du warst auf dem Flug zurück nach Hause, als du mit einem Meteorit kollidierst und auf einem hochgefährlichen Planeten abstürzt.
+            Wegen des gefährlichen Wetters und ununterbrochenen Stürmen hast du nicht viel Zeit, um dein Raumschiff zu reparieren.
+            Wer weiß, was für Gefahren noch auf der Planetenoberfläche lauern....</p>
+        <a href="{{ url_for('views.home') }}">
+            <button>Weiter</button>
+        </a>
+    </div>
+</body>
+</html>
