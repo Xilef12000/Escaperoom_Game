@@ -41,3 +41,9 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #00CC00; /* Hintergrundfarbe des Buttons beim Überfahren */
 }
+.solution_right {
+    color: #14FF00;
+}
+.solution_wrong {
+    color: #FF0000;
+}

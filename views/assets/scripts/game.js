@@ -1,3 +1,67 @@
+function start() {
+    document.cookie = "raetsel01=false; path=/";
+    document.cookie = "raetsel02=false; path=/";
+    document.cookie = "raetsel03=false; path=/";
+    document.cookie = "end=false; path=/";
+    location.href = "/home"
+}
+function check() {
+    document.cookie = "end=true; path=/";
+    let right = 0;
+    right += document.cookie.match(new RegExp('(^| )' + "raetsel01" + '=([^;]+)'))[2] == "true" ? 1 : 0;
+    right += document.cookie.match(new RegExp('(^| )' + "raetsel02" + '=([^;]+)'))[2] == "true" ? 1 : 0;
+    right += document.cookie.match(new RegExp('(^| )' + "raetsel03" + '=([^;]+)'))[2] == "true" ? 1 : 0;
+    if (right == 3){
+        location.href = "/win";
+    }
+    else {
+        location.href = "/lose"
+    }
+}
+function check_raetsel01() {
+    let solution = document.getElementById("solution_out")
+    if (document.getElementById("solution").value.trim().toLowerCase() == "läufer f8, springer h3, turm h4"){
+        solution.innerHTML = "Richtige Antwort!";
+        solution.className = "solution_right";
+        document.cookie = "raetsel01=true; path=/";
+    }
+    else {
+        solution.innerHTML = "Falsche Antwort...";
+        solution.className = "solution_wrong";
+    }
+}
+function check_raetsel02() {
+    let solution = document.getElementById("solution_out")
+    if (document.getElementById("solution").value.trim().toLowerCase() == "leibspeise"){
+        solution.innerHTML = "Passwort correct <br> booting up STARFLEET COMMAND SYSTEM<";
+        document.getElementById("submit").style.display = 'none';
+        solution.className = "solution_right";
+        document.cookie = "raetsel02=true; path=/";
+    }
+    else {
+        solution.innerHTML = "incorrect password";
+        solution.className = "solution_wrong";
+    }
+}
+function check_raetsel03() {
+    let right = 0;
+    right += document.getElementById("solution_a").value.trim().toLowerCase() == "deilenschraube" ? 1 : 0;
+    right += document.getElementById("solution_b").value.trim().toLowerCase() == "bohrschraube" ? 1 : 0;
+    right += document.getElementById("solution_c").value.trim().toLowerCase() == "holzbauschraube" ? 1 : 0;
+    right += document.getElementById("solution_d").value.trim().toLowerCase() == "sprenglerschraube" ? 1 : 0;
+    right += document.getElementById("solution_e").value.trim().toLowerCase() == "justierschraube" ? 1 : 0;
+    let solution = document.getElementById("solution_out")
+    if (right == 5){
+        solution.innerHTML = "Richtige Antwort!";
+        solution.className = "solution_right";
+        document.cookie = "raetsel03=true; path=/";
+    }
+    else {
+        solution.innerHTML = "Falsche Antwort...";
+        solution.className = "solution_wrong";
+    }
+}
+/*
 // Funktion, um den Timer zu aktualisieren
 function startTimer(duration, display) {
     var start = Date.now(),
@@ -54,3 +118,4 @@ window.onload = function () {
     // Timer starten
     startTimer(remaining, display);
 };
+*/

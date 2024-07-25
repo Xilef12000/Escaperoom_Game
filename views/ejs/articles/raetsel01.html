@@ -5,13 +5,11 @@
     <p>Du siehst, dass unter dem Zettel noch ein weiterer Zettel klebt:</p>
     <img src="assets/images/Raetsel.png">
 
-    <form action="{{ url_for('views.check_solution') }}" method="POST">
+    <form id="form" action="javascript:check_raetsel01()">
         <label for="solution">Deine Lösung:</label>
         <input type="text" id="solution" name="solution" required>
         <input type="hidden" name="riddle" value="raetsel01">
         <button type="submit">Überprüfen</button>
     </form>
-
-    <p style="color: green;">Richtige Antwort!</p>
-    <p style="color: red;">Falsche Antwort...</p>
+    <p id="solution_out"></p>
 </article>

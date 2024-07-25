@@ -8,3 +8,9 @@
     box-shadow: 0 4px 8px #000000; /* Schlagschatten */
     margin: 20px auto; /* Zentrierung der Box */
 }
+.solution_right {
+    color: #14FF00;
+}
+.solution_wrong {
+    color: #FF0000;
+}

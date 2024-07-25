@@ -22,7 +22,7 @@
     
     <a>Um den Sauerstoffgenerator zu reparieren, musst du jedes Zahnrad mit der entsprechenden Schraube festmachen.</a>
     
-    <form action="{{ url_for('views.check_solution') }}" method="POST">
+    <form id="form" action="javascript:check_raetsel03()">
         <label for="solution_a">Zahnrad A:</label>
         <input type="text" id="solution_a" name="solution_a" required><br>
         <label for="solution_b">Zahnrad B:</label>
@@ -36,6 +36,5 @@
         <input type="hidden" name="riddle" value="raetsel03">
         <button type="submit">Überprüfen</button>
     </form>
-    <p style="color: #14FF00;">Richtige Antwort!<br></p>
-    <p style="color: #FF0000;">Falsche Antwort...</p>
+    <p id="solution_out"></p>
 </article>
