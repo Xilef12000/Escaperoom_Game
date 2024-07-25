@@ -1,0 +1,28 @@
+{
+  "name": "escaperoom_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xilef12000/Escaperoom_Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xilef12000/Escaperoom_Game/issues"
+  },
+  "homepage": "https://github.com/Xilef12000/Escaperoom_Game#readme",
+  "type": "module",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mime": "^4.0.4"
+  }
+}
