@@ -1,8 +1,4 @@
-{% extends "layout.html" %}
-
-{% block title %}Sauerstoff Generator{% endblock %}
-
-{% block content %}
+<%- include('layout') -%> 
  <style>
         .box {
             width: 700px; /* Breite der Box */
@@ -52,11 +48,5 @@
     <input type="hidden" name="riddle" value="raetsel03">
     <button type="submit">Überprüfen</button>
 </form>
-        {% if result is defined %}
-    {% if result %}
-        <p style="color: #14FF00;">Richtige Antwort!<br></p>
-    {% else %}
-        <p style="color: #FF0000;">Falsche Antwort...</p>
-    {% endif %}
-{% endif %}
-{% endblock %}
+<p style="color: #14FF00;">Richtige Antwort!<br></p>
+<p style="color: #FF0000;">Falsche Antwort...</p>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
+    <title>Title</title>
     <style>
         body {
             margin: 0;
@@ -45,11 +45,10 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="{{ url_for('views.home') }}">Zurück</a>
+        <a href="home">Zurück</a>
         <div id="timer">00:45:00</div>
     </div>
     <div class="content">
-        {% block content %}{% endblock %}
     </div>
 
     <script>

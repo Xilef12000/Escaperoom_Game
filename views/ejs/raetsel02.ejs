@@ -1,8 +1,4 @@
-{% extends "layout.html" %}
-
-{% block title %}Shiff-Computer{% endblock %}
-
-{% block content %}
+<%- include('layout') -%> 
     <style>
         .box {
             width: 1000px; /* Breite der Box */
@@ -88,14 +84,8 @@ Device #01: Quantum Flash Module *Speed*<br>
     <input type="hidden" name="riddle" value="raetsel02">
     <button type="submit">Überprüfen</button>
     </form>
-        {% if result is defined %}
-    {% if result %}
         <p style="color: #14FF00;">Passwort correct <br>
         booting up STARFLEET COMMAND SYSTEM</p>
-    {% else %}
         <p style="color: #FF0000;">incorrect password</p>
-    {% endif %}
-{% endif %}
     </div>
 </body>
-{% endblock %}

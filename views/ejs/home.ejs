@@ -1,8 +1,4 @@
-{% extends "layout.html" %}
-
-{% block title %}Home Page{% endblock %}
-
-{% block content %}
+<%- include('layout') -%> 
 <style>
     .content-container {
         display: flex;
@@ -56,13 +52,13 @@
     Das Einzige was du jetzt machen kannst ist, die Rätsel rechtzeitig zu lösen...</p>
 
     <div class="buttons-container">
-        <a href="{{ url_for('views.raetsel01') }}">
+        <a href="raetsel01">
             <button>Motorraum</button>
         </a>
-        <a href="{{ url_for('views.raetsel02') }}">
+        <a href="raetsel02">
             <button>Schiff-Computer</button>
         </a>
-        <a href="{{ url_for('views.raetsel03') }}">
+        <a href="raetsel03">
             <button>Sauerstoff-Generator</button>
         </a>
         <form action="{{ url_for('views.check_all_solved') }}" method="GET">
@@ -70,4 +66,3 @@
         </form>
     </div>
 </div>
-{% endblock %}
