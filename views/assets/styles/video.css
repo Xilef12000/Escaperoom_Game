@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #0C0B0B;
+    font-family: Arial, sans-serif;
+}
+video {
+    max-width: 100%;
+    height: auto;
+}
+article {
+    text-align: center;
+    margin-top: 20px;
+}
+article p {
+    margin-bottom: 20px;
+}
+article a {
+    display: block;
+}
+article a button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0D0E0E;
+    color: #11FFFF;
+    border-radius: 10px;
+}

@@ -1,0 +1,10 @@
+.box {
+    width: 700px; /* Breite der Box */
+    height: 70px; /* Höhe der Box */
+    background-color: #E6F57F; /* Hintergrundfarbe der Box */
+    color: #454541; /* Textfarbe */
+    padding: 10px;
+    border-radius: 3px; /* Abgerundete Ecken */
+    box-shadow: 0 4px 8px #000000; /* Schlagschatten */
+    margin: 20px auto; /* Zentrierung der Box */
+}

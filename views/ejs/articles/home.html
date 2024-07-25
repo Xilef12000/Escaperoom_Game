@@ -1,0 +1,30 @@
+<article>
+    <div class="content-container">
+        <p>Dein Schiff hat großen Schaden erlitten und du hast keinen Empfang um Zuständige um Hilfe zu bitten.
+        Als du dich von dem Schock erholt hast, stehst du auf, um den erlittenen Schaden zu beurteilen... doch.. Hm? An einem der Fenster in deinem Schiff
+        klebt ein Zettel. Anscheinend lebt auf diesem Planet eine intelligente Lebensform!
+        Voller Hoffnung, dass du Hilfe von den Aliens kriegst, liest du den Zettel...
+        Doch die Nachricht der Aliens ist nicht das, was du dir erhofft hast...</p>
+
+        <div class="box">"Wir stellen Rätsel. Wenn du Rätsel löst, wir helfen dir Raumschiff zu reparieren.
+        Wenn nicht, du bist Leibspeise für uns, weil Adrenalin macht dich köstlicher."</div>
+
+        <p>Du fühlst wie dein Herz vor Angst stehenbleibt, doch du hast keine Zeit zu verschwenden. Du atmest tief durch und schaffst es, dich zu beruhigen...
+        Das Einzige was du jetzt machen kannst ist, die Rätsel rechtzeitig zu lösen...</p>
+
+        <div class="buttons-container">
+            <a href="raetsel01">
+                <button>Motorraum</button>
+            </a>
+            <a href="raetsel02">
+                <button>Schiff-Computer</button>
+            </a>
+            <a href="raetsel03">
+                <button>Sauerstoff-Generator</button>
+            </a>
+            <form action="{{ url_for('views.check_all_solved') }}" method="GET">
+                <button type="submit">Raumschiff Starten</button>
+            </form>
+        </div>
+    </div>
+</article>
