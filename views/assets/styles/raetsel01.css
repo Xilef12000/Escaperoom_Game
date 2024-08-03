@@ -1,6 +1,6 @@
 .solution_right {
-    color: #14FF00;
+    color: var(--green);
 }
 .solution_wrong {
-    color: #FF0000;
+    color: var(--red);
 }

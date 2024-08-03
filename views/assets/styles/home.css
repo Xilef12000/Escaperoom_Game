@@ -9,11 +9,11 @@
 .box {
     width: 700px; /* Breite der Box */
     height: auto; /* Höhe automatisch anpassen */
-    background-color: #E6F57F; /* Hintergrundfarbe der Box */
-    color: #D40303; /* Textfarbe */
+    background-color: var(--yellow); /* Hintergrundfarbe der Box */
+    color: var(--red); /* Textfarbe */
     padding: 20px;
     border-radius: 3px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 8px #000000; /* Schlagschatten */
+    box-shadow: 0 4px 8px black; /* Schlagschatten */
     margin: 20px 0; /* Abstand oben und unten */
 }
 .buttons-container {
@@ -27,8 +27,8 @@
     display: inline-block;
 }
 .buttons-container button {
-    background-color: #0D0E0E;
-    color: #11FFFF;
+    background-color: var(--bt);
+    color: var(--blue);
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 16px;

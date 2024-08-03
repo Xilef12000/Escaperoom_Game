@@ -1,18 +1,18 @@
 .box {
     width: 1000px; /* Breite der Box */
     height: 650px; /* Höhe der Box */
-    background-color: #040404; /* Hintergrundfarbe der Box */
-    color: #00FF02; /* Textfarbe */
+    background-color: var(--bt); /* Hintergrundfarbe der Box */
+    color: var(--green); /* Textfarbe */
     padding: 10px;
     border-radius: 10px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 8px #000000; /* Schlagschatten */
+    box-shadow: 0 4px 8px black; /* Schlagschatten */
     margin: 20px auto; /* Zentrierung der Box */
     font-family: 'Courier New', Courier, monospace;
 }
 input[type="text"] {
     border: none; /* Keine Rahmen um das Input-Feld */
-    background: #000000; /* Schwarzer Hintergrund */
-    color: #00FF02; /* Grüner Text */
+    background: var(--bt); /* Schwarzer Hintergrund */
+    color: var(--green); /* Grüner Text */
     font-family: 'Courier New', Courier, monospace; /* Schriftart */
     width: calc(100% - 50px); /* Vollständige Breite abzüglich der Breite des Texts */
     margin-left: 10px; /* Abstand zum Text */
@@ -22,13 +22,13 @@ input[type="text"] {
 
 /* Stil für das Eingabefeld, wenn es aktiviert ist */
 input[type="text"]:focus {
-    background: #000000; /* Schwarzer Hintergrund, wenn das Feld aktiviert ist */
-    color: #00FF02; /* Grüner Text */
+    background: var(--bt); /* Schwarzer Hintergrund, wenn das Feld aktiviert ist */
+    color: var(--green); /* Grüner Text */
 }
 
 /* Stil für den überprüfen Button */
 button[type="submit"] {
-    background-color: #00FF02; /* Hintergrundfarbe des Buttons */
+    background-color: var(--green); /* Hintergrundfarbe des Buttons */
     color: #000000; /* Textfarbe des Buttons */
     border: none; /* Kein Rahmen um den Button */
     padding: 10px 20px; /* Innenabstand */
@@ -39,11 +39,11 @@ button[type="submit"] {
 
 /* Stil für den überprüfen Button beim Überfahren */
 button[type="submit"]:hover {
-    background-color: #00CC00; /* Hintergrundfarbe des Buttons beim Überfahren */
+    opacity: 0.8;
 }
 .solution_right {
-    color: #14FF00;
+    color: var(--green);
 }
 .solution_wrong {
-    color: #FF0000;
+    color: var(--red);
 }

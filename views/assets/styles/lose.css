@@ -11,7 +11,7 @@ body {
     flex-direction: column; /* Hinzugefügt, um die vertikale Ausrichtung zu ermöglichen */
 }
 .message {
-    color: red;
+    color: var(--red);
     font-size: 48px;
     font-weight: bold;
     text-align: center;
@@ -24,8 +24,8 @@ body {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #0D0E0E;
-    color: #11FFFF;
+    background-color: var(--bt);
+    color: var(--blue);
     border-radius: 10px;
     border: none;
 }
