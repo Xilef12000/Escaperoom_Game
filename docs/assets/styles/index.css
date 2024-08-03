@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url("/assets/images/bg01.png");
+    background-image: url("/assets/images/bg01.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,4 +19,7 @@ body {
     cursor: pointer;
     background-color: var(--bt);
     color: var(--blue);
+}
+h1 {
+   font-size: 4rem;
 }
