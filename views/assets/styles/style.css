@@ -25,6 +25,13 @@ body {
     text-decoration: none;
     font-size: 17px;
 }
+.navbar .yellow#timer {
+    color: yellow;
+}
+.navbar .red#timer {
+    color: red;
+    font-weight: bold;
+}
 .navbar #timer {
     font-size: 17px;
     color: #11FFFF;

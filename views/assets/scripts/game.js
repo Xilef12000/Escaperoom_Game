@@ -1,9 +1,22 @@
+function check_progression() {
+    if (location.pathname != "/game") {
+        if (document.cookie == "" || document.cookie.match(new RegExp('(^| )' + "end" + '=([^;]+)'))[2] == "true") {
+            location.href = "/";
+        }
+        console.log(document.cookie.match(new RegExp('(^| )' + "end" + '=([^;]+)'))[2] == "true");
+    }
+}
+check_progression();
+window.onpageshow = function(event) {
+    check_progression();
+};
 function start() {
     document.cookie = "raetsel01=false; path=/";
     document.cookie = "raetsel02=false; path=/";
     document.cookie = "raetsel03=false; path=/";
     document.cookie = "end=false; path=/";
-    location.href = "/home"
+    document.cookie = `start=${new Date()}; path=`;
+    location.href = "/home";
 }
 function check() {
     document.cookie = "end=true; path=/";
@@ -61,6 +74,33 @@ function check_raetsel03() {
         solution.className = "solution_wrong";
     }
 }
+function set_timer() {
+    let timer = document.getElementById("timer");
+    let start = document.cookie.match(new RegExp('(^| )' + "start" + '=([^;]+)'))[2];
+    let time_passed = (Date.now() - Date.parse(start))/1000;
+    let time_frame = 45*60 // allowed time in seconds
+    let time_left = time_frame - Math.floor(time_passed);
+    let time_left_str = new Date(null);
+    time_left_str.setSeconds(time_left);
+    timer.innerHTML = time_left_str.toISOString().slice(11, 19);
+    if (time_left <= 1) {
+        timer.classList.add("red");
+        timer.innerHTML = "Time's up!";
+    }
+    else if (time_left <= 5*60) {
+        timer.classList.add("red");
+    }
+    else if (time_left <= 10*60) {
+        timer.classList.add("yellow");
+    }
+    if (time_left < 0) {
+        check();
+    }
+}
+set_timer();
+var timerId = window.setInterval(function() {
+    set_timer();
+}, 1000);
 /*
 // Funktion, um den Timer zu aktualisieren
 function startTimer(duration, display) {
