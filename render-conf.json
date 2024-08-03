@@ -3,6 +3,6 @@
     "out_dir":"docs/",
     "start_urls":["http://localhost:3000/", "http://localhost:3000/404", "http://localhost:3000/lose", "http://localhost:3000/win"],
     "elements_href":["a", "link"],
-    "elements_src":["img", "script"],
+    "elements_src":["img", "script", "source"],
     "db":"render-list.json"
 }
