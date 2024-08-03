@@ -7,11 +7,6 @@ body {
     margin: 0;
     background-color: var(--bg);
 }
-video {
-    max-width: 60vw;
-    max-height: 60vh;
-    height: auto;
-}
 article {
     text-align: center;
     margin-top: 1.25rem;
