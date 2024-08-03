@@ -88,6 +88,8 @@ while True:
                         for c in css:   
                             if c.find('@import') != -1:
                                 urls.append(urljoin(url,c.split('"', 2)[1]))
+                            if c.find('url') != -1:
+                                urls.append(urljoin(url,c.split('"', 2)[1]))
                         '''
                         # commented because current system can't handle data urls
                         if decoded.find('@font-face') != -1:
