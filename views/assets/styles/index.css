@@ -13,7 +13,10 @@ body {
     text-align: center;
 }
 .center-button button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 0.75rem 1.25rem;
+    font-size: 2rem;
+    border-radius: 0.75rem;
     cursor: pointer;
+    background-color: var(--bt);
+    color: var(--blue);
 }

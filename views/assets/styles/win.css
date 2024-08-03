@@ -5,12 +5,22 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: var(--bt);
+    background-color: var(--bg);
 }
-video {
-    max-width: 60vw;
-    max-height: 60vh;
+img {
+    max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.float {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--green);
 }
 article {
     text-align: center;

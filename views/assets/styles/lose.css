@@ -12,20 +12,20 @@ body {
 }
 .message {
     color: var(--red);
-    font-size: 48px;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 20px; /* Abstand zum Button */
+    margin-bottom: 1.25rem; /* Abstand zum Button */
 }
 .center-button {
     text-align: center;
 }
 .center-button button {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
     cursor: pointer;
     background-color: var(--bt);
     color: var(--blue);
-    border-radius: 10px;
+    border-radius: 0.75rem;
     border: none;
 }
