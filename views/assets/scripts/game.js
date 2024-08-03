@@ -15,12 +15,12 @@ function check() {
         location.href = "/win";
     }
     else {
-        location.href = "/lose"
+        location.href = "/lose";
     }
 }
 function check_raetsel01() {
     let solution = document.getElementById("solution_out")
-    if (document.getElementById("solution").value.trim().toLowerCase() == "läufer f8, springer h3, turm h4"){
+    if (document.getElementById("solution").value.trim().toLowerCase() == "läufer f8, springer h3, turm h4") {
         solution.innerHTML = "Richtige Antwort!";
         solution.className = "solution_right";
         document.cookie = "raetsel01=true; path=/";
@@ -31,8 +31,8 @@ function check_raetsel01() {
     }
 }
 function check_raetsel02() {
-    let solution = document.getElementById("solution_out")
-    if (document.getElementById("solution").value.trim().toLowerCase() == "leibspeise"){
+    let solution = document.getElementById("solution_out");
+    if (document.getElementById("solution").value.trim().toLowerCase() == "leibspeise") {
         solution.innerHTML = "Passwort correct <br> booting up STARFLEET COMMAND SYSTEM<";
         document.getElementById("submit").style.display = 'none';
         solution.className = "solution_right";
@@ -50,7 +50,7 @@ function check_raetsel03() {
     right += document.getElementById("solution_c").value.trim().toLowerCase() == "holzbauschraube" ? 1 : 0;
     right += document.getElementById("solution_d").value.trim().toLowerCase() == "sprenglerschraube" ? 1 : 0;
     right += document.getElementById("solution_e").value.trim().toLowerCase() == "justierschraube" ? 1 : 0;
-    let solution = document.getElementById("solution_out")
+    let solution = document.getElementById("solution_out");
     if (right == 5){
         solution.innerHTML = "Richtige Antwort!";
         solution.className = "solution_right";
