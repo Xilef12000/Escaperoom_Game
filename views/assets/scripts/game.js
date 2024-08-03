@@ -1,14 +1,18 @@
-function check_progression() {
+function check_cookies() {
     if (location.pathname != "/game") {
         if (document.cookie == "" || document.cookie.match(new RegExp('(^| )' + "end" + '=([^;]+)'))[2] == "true") {
             location.href = "/";
         }
         console.log(document.cookie.match(new RegExp('(^| )' + "end" + '=([^;]+)'))[2] == "true");
+        set_timer();
+        var timerId = window.setInterval(function() {
+            set_timer();
+        }, 1000);
     }
 }
-check_progression();
+check_cookies();
 window.onpageshow = function(event) {
-    check_progression();
+    check_cookies();
 };
 function start() {
     document.cookie = "raetsel01=false; path=/";
@@ -97,10 +101,6 @@ function set_timer() {
         check();
     }
 }
-set_timer();
-var timerId = window.setInterval(function() {
-    set_timer();
-}, 1000);
 /*
 // Funktion, um den Timer zu aktualisieren
 function startTimer(duration, display) {
