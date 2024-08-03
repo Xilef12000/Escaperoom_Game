@@ -1,0 +1,55 @@
+:root {
+    --red: #FF0000;
+    --green: #14FF00;
+    --blue: #11FFFF;
+    --yellow: #E6F57F;
+    --bg: #404040;
+    --nav: #333;
+    --bt: #0D0E0E;
+    font-size: max(calc(100vh/68), calc(100vw/120), 16px);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--blue);
+    font-size: 1rem;
+}
+.navbar {
+    width: 100%;
+    background-color: var(--nav);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.navbar a {
+    color: Var(--blue);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navbar .yellow#timer {
+    color: var(--yellow);
+}
+.navbar .red#timer {
+    color: var(--red);
+    font-weight: bold;
+}
+.navbar #timer {
+    font-size: 17px;
+    color: var(--blue);
+    white-space: nowrap; /* Verhindert, dass der Timer umgebrochen wird */
+    margin-left: auto; /* Schiebt den Timer ganz nach rechts */
+}
+article {
+    margin-top: 50px; /* Abstand für die Navbar */
+    padding: 20px;
+}

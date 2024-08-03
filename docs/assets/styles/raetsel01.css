@@ -1,0 +1,12 @@
+.solution_right {
+    color: var(--green);
+}
+.solution_wrong {
+    color: var(--red);
+}
+img {
+    max-width: 80vw;
+}
+input, button {
+    font-size: 1rem;
+}

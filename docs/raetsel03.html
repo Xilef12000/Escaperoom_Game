@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<link rel="stylesheet" href="/assets/styles/style.css">
+<script defer src="/assets/scripts/script.js" type="text/javascript"></script>
+	<meta name="title" content="Sauerstoff generator" />
+    <link rel="stylesheet" href="/assets/styles/raetsel03.css">
+</head>
+<body>
+	<div class="navbar">
+    <a href="/home">Zurück</a>
+    <div id="timer" class="">99:99:99</div>
+    <script defer src="/assets/scripts/game.js" type="text/javascript"></script>
+</div>
+	<article>
+    <p>Der Sauerstoffgenerator deines Schiffes hat bei der Kollision auch Schaden erlitten. Du machst dich auf dem Weg, um ihn zu reparieren und als du den Raum betrittst, siehst du, dass 5 unterschiedlich große Schrauben auf dem Boden liegen: <br>
+        Die Bohrschraube, Deilenschraube, Holzbauschraube, Justierschraube und Sprenglerschraube.</p>
+    <p>Du weißt, dass diese Schrauben Zahnräder im Sauerstoffgenerator stabilisiert haben, aber nicht mehr, zu welchem Zahnrad die jeweiligen Schrauben gehören. Du schaust dich um und findest auch hier wieder ein Zettel am Fenster kleben:</p>
+    
+    <div class="box">
+        <p>Zahnrad A und E sind entweder das Kleinste oder das Größte <br>
+        Zahnrad D ist kleiner als Zahnrad A <br>
+        Zahnrad B ist das Drittkleinste und Drittgrößte <br>
+        Zahnrad C ist größer als Zahnrad E und kleiner als Zahnrad D</p>
+    </div>
+    
+    
+    <p>Du erinnerst dich noch, dass die kleinste Schraube zu dem größten Zahnrad gehört und je kleiner die Zahnräder werden desto größer die Schrauben.</p>
+    
+    <div class="box">
+    <p>Die Justierschraube ist die Größte<br>
+        Die Holzbauschraube ist größer als die Deilen und die Bohrschraube<br>
+        Die Bohrschraube ist größer als die Sprenglerschraube <br>
+        Die Sprenglerschraube ist größer als die Deilenschraube aber kleiner als die Holzbauschraube</p>
+    </div>
+    
+    <p>Um den Sauerstoffgenerator zu reparieren, musst du jedes Zahnrad mit der entsprechenden Schraube festmachen.</p>
+    
+    <form id="form" action="javascript:check_raetsel03()">
+        <label for="solution_a">Zahnrad A:</label>
+        <input type="text" id="solution_a" name="solution_a" required><br>
+        <label for="solution_b">Zahnrad B:</label>
+        <input type="text" id="solution_b" name="solution_b" required><br>
+        <label for="solution_c">Zahnrad C:</label>
+        <input type="text" id="solution_c" name="solution_c" required><br>
+        <label for="solution_d">Zahnrad D:</label>
+        <input type="text" id="solution_d" name="solution_d" required><br>
+        <label for="solution_e">Zahnrad E:</label>
+        <input type="text" id="solution_e" name="solution_e" required><br>
+        <input type="hidden" name="riddle" value="raetsel03">
+        <button type="submit">Überprüfen</button>
+    </form>
+    <p id="solution_out"></p>
+</article>
+	
+</body>
+</html>

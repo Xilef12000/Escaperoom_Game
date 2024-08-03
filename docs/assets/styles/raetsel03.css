@@ -1,0 +1,18 @@
+.box {
+    width: 60vw; /* Breite der Box */
+    background-color: var(--yellow); /* Hintergrundfarbe der Box */
+    color: var(--bg); /* Textfarbe */
+    padding: 0.75rem;
+    border-radius: 0.25rem; /* Abgerundete Ecken */
+    box-shadow: 0 0.25rem 0.5rem black; /* Schlagschatten */
+    margin: 1.25rem auto; /* Zentrierung der Box */
+}
+.solution_right {
+    color: var(--green);
+}
+.solution_wrong {
+    color: var(--red);
+}
+input, button {
+    font-size: 1rem;
+}

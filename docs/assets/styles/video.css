@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bt);
+}
+video {
+    max-width: 60vw;
+    max-height: 60vh;
+    height: auto;
+}
+article {
+    text-align: center;
+    margin-top: 1.25rem;
+}
+article p {
+    margin-bottom: 1.25rem;
+}
+article a {
+    display: block;
+}
+article a button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: var(--bt);
+    color: var(--blue);
+    border-radius: 0.75rem;
+}
