@@ -1,0 +1,29 @@
+{
+    "parse": [
+        "http://localhost:3000/",
+        "http://localhost:3000/404",
+        "http://localhost:3000/lose",
+        "http://localhost:3000/win",
+        "http://localhost:3000/video",
+        "http://localhost:3000/assets/styles/style.css",
+        "http://localhost:3000/assets/styles/index.css",
+        "http://localhost:3000/assets/scripts/script.js",
+        "http://localhost:3000/home",
+        "http://localhost:3000/assets/styles/lose.css",
+        "http://localhost:3000/assets/styles/win.css",
+        "http://localhost:3000/assets/images/Win.png",
+        "http://localhost:3000/game",
+        "http://localhost:3000/assets/styles/video.css",
+        "http://localhost:3000/raetsel01",
+        "http://localhost:3000/raetsel02",
+        "http://localhost:3000/raetsel03",
+        "http://localhost:3000/assets/styles/home.css",
+        "http://localhost:3000/assets/scripts/game.js",
+        "http://localhost:3000/assets/styles/game.css",
+        "http://localhost:3000/assets/styles/raetsel01.css",
+        "http://localhost:3000/assets/images/Beispiel.png",
+        "http://localhost:3000/assets/images/Raetsel.png",
+        "http://localhost:3000/assets/styles/raetsel02.css",
+        "http://localhost:3000/assets/styles/raetsel03.css"
+    ]
+}
