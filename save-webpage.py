@@ -106,6 +106,8 @@ while True:
                     file = "{}{}.html".format(config["out_dir"],path)
                 #print("        "+file)
 
+                file = file.replace("/Escaperoom_Game", "")
+
                 os.makedirs(os.path.dirname(file), exist_ok=True)
                 f = open(file, 'wb')
                 f.write(webContent)

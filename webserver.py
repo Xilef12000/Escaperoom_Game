@@ -7,7 +7,12 @@ serverPort = 8000
 
 class HTTPRequestHandler(server.SimpleHTTPRequestHandler):
     def do_GET(self):
-        path = "docs/" + self.path[1:].split("?")[0]
+        path = self.path[1:].split("?")[0]
+        print(path)
+        path = path.replace("Escaperoom_Game", "")
+        print(path)
+        path = "docs" + path
+        print(path)
         if os.path.isfile(path):
             self.send_response(200)
             self.send_header("Content-type", self.guess_type(path))

@@ -9,7 +9,11 @@ app.get('*', async (req, res) => {
     try {
         var url = req.originalUrl;
         console.log(url)
-
+        if (! url.startsWith("/Escaperoom_Game")) {
+            res.status(400).send();
+            throw('invalid path');
+        }
+        url = url.replace("/Escaperoom_Game", "");
         // trim trailing '/'
         var end = url.length;
         while(end > 0 && url[end - 1] === '/')
@@ -20,7 +24,7 @@ app.get('*', async (req, res) => {
             url = '/index';
         }
         var fileType = mime.getType(url.split('.').at(-1))
-        console.log(fileType)
+        //console.log(fileType)
         if (!fileType && fs.existsSync('./views/ejs/' + url + '.ejs')) { // if fileType == Null and .ejs file exists
             res.render('ejs/' + url); //render page
         }
